@@ -1,73 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abhay Yadav | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abhay Yadav — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- Hero Section -->
-  <header class="hero">
-    <h1>Abhay Yadav</h1>
-    <p>B.Tech IT | Aspiring Full Stack Developer</p>
-    <a href="#projects" class="btn">View My Work</a>
-  </header>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a B.Tech Information Technology graduate with a passion for full stack web development. I love solving problems, optimizing systems, and sharing my learning journey daily on LinkedIn.
-    </p>
-    <img src="profile.jpg" alt="Abhay Yadav">
-  </section>
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Python, C++, JavaScript</li>
-      <li>React, Node.js, SQL, Git</li>
-      <li>Computational Mathematics & Visualization</li>
-      <li>Digital Branding & Communication</li>
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">AY</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certs</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
+    <div class="nav-status">
+      <span class="status-dot"></span> Open to Work
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg-text">DEVELOPER</div>
+
+    <div class="hero-content">
+      <div class="hero-left">
+        <p class="hero-eyebrow">Hello, I'm</p>
+        <h1 class="hero-name">
+          <span class="line-reveal">Abhay</span>
+          <span class="line-reveal delay-1">Yadav</span>
+        </h1>
+        <p class="hero-role">B.Tech IT &nbsp;·&nbsp; Full Stack Developer &nbsp;·&nbsp; Builder</p>
+        <p class="hero-desc">
+          Crafting digital experiences from Chandpur, UP. Currently mastering the MERN stack and documenting every step of the journey.
+        </p>
+        <div class="hero-ctas">
+          <a href="#projects" class="cta-primary">View My Work</a>
+          <a href="#contact" class="cta-secondary">Get In Touch</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">5+</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">7.68</span>
+            <span class="stat-label">SGPA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="profile-frame">
+          <div class="profile-ring"></div>
+          <div class="profile-ring ring-2"></div>
+          <img src="profile.jpg" alt="Abhay Yadav" class="profile-img"/>
+          <div class="profile-badge">
+            <span>💻</span> MERN Stack
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
   </section>
 
-  <!-- Projects Section -->
-<section id="projects">
-  <h2>Projects</h2>
-
-  <div class="project-card">
-    <h3>Portfolio Website</h3>
-    <p>A responsive portfolio site showcasing my journey as a B.Tech IT student and aspiring full stack developer.</p>
-    <a href="https://abhayyadav0090.github.io/portfolio/" target="_blank">View Project</a>
-  </div>
-
-  <div class="project-card">
-    <h3>Daily Routine Webpage</h3>
-    <p>Created during the LetsUpgrade Bootcamp using HTML & CSS to practice layouts and fundamentals.</p>
-    <a href="https://abhayyadav0090.github.io/daily-routine-webpage/" target="_blank">View Project</a>
-  </div>
-
-  <div class="project-card">
-    <h3>Nutri-Flex</h3>
-    <p>A nutrition-themed web app with responsive design, blending creativity and functionality.</p>
-    <a href="https://abhayyadav0090.github.io/Nutri-Flex/" target="_blank">View Project</a>
-  </div>
-</section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Let’s connect!</p>
-    <a href="mailto:abhayyadav19955@gmail.com" class="btn">Email Me</a>
-    <a href="https://www.linkedin.com/in/abhay-yadav-6923742b5/" target="_blank" class="btn">LinkedIn</a>
-    <a href="https://github.com/abhayyadav0090" target="_blank" class="btn">GitHub</a>
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title">About Me</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="about-lead">I'm a passionate developer who turns ideas into interactive web experiences.</p>
+        <p>Pursuing B.Tech in Information Technology, I come from a background in Mechanical Engineering — which gives me a unique, systems-thinking approach to writing code and solving problems.</p>
+        <p>I believe in building in public. Every project, certificate, and milestone gets shared on LinkedIn with #CoderArmy — because learning out loud is the best way to grow.</p>
+        <div class="about-tags">
+          <span class="atag">🌱 Lifelong Learner</span>
+          <span class="atag">🏗️ Builder</span>
+          <span class="atag">📢 Building in Public</span>
+          <span class="atag">☁️ Cloud Curious</span>
+          <span class="atag">💹 Finance + Tech</span>
+        </div>
+      </div>
+      <div class="about-card">
+        <div class="info-row">
+          <span class="info-label">📍 Location</span>
+          <span class="info-value">Mainpuri, UP, India</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">🎓 Degree</span>
+          <span class="info-value">B.Tech IT (2026)</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">📊 SGPA</span>
+          <span class="info-value">7.68 / 10</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">📧 Email</span>
+          <span class="info-value">abhayyadav19955@gmail.com</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">🔭 Currently</span>
+          <span class="info-value">Learning MERN Stack</span>
+        </div>
+        <a href="mailto:abhayyadav19955@gmail.com" class="cta-primary" style="margin-top:20px;display:inline-block;">Hire Me</a>
+      </div>
+    </div>
   </section>
 
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Skills</h2>
+    </div>
+    <div class="skills-grid">
+
+      <div class="skill-category">
+        <div class="skill-cat-icon">🖥️</div>
+        <h3>Frontend</h3>
+        <div class="skill-bars">
+          <div class="skill-bar-row">
+            <span>HTML & CSS</span>
+            <div class="bar"><div class="bar-fill" style="--w:92%"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <span>JavaScript</span>
+            <div class="bar"><div class="bar-fill" style="--w:75%"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <span>React</span>
+            <div class="bar"><div class="bar-fill" style="--w:60%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-cat-icon">⚙️</div>
+        <h3>Backend</h3>
+        <div class="skill-bars">
+          <div class="skill-bar-row">
+            <span>Node.js</span>
+            <div class="bar"><div class="bar-fill" style="--w:70%"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <span>Express.js</span>
+            <div class="bar"><div class="bar-fill" style="--w:65%"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <span>MongoDB</span>
+            <div class="bar"><div class="bar-fill" style="--w:58%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-cat-icon">☁️</div>
+        <h3>Cloud & Tools</h3>
+        <div class="skill-bars">
+          <div class="skill-bar-row">
+            <span>AWS Basics</span>
+            <div class="bar"><div class="bar-fill" style="--w:65%"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <span>Git & GitHub</span>
+            <div class="bar"><div class="bar-fill" style="--w:80%"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <span>AI Tools</span>
+            <div class="bar"><div class="bar-fill" style="--w:78%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-cat-icon">🧠</div>
+        <h3>Other</h3>
+        <div class="skill-bars">
+          <div class="skill-bar-row">
+            <span>Python</span>
+            <div class="bar"><div class="bar-fill" style="--w:68%"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <span>C++</span>
+            <div class="bar"><div class="bar-fill" style="--w:60%"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <span>Content Writing</span>
+            <div class="bar"><div class="bar-fill" style="--w:85%"></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2 class="section-title">Projects</h2>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card featured">
+        <div class="project-num">01</div>
+        <div class="project-tag-top">⭐ Featured</div>
+        <div class="project-emoji">🗂️</div>
+        <h3>Portfolio Website</h3>
+        <p>A responsive personal portfolio showcasing projects, skills, and contact info. Built with clean card layouts and hover effects — the very site you're looking at!</p>
+        <div class="project-tech">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+        <a href="https://abhayyadav0090.github.io/portfolio/" target="_blank" class="project-link">
+          View Live <span>→</span>
+        </a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-num">02</div>
+        <div class="project-emoji">⏰</div>
+        <h3>Daily Routine Webpage</h3>
+        <p>A beautiful timeline-style daily schedule page built during LetsUpgrade Bootcamp. Features color-coded time blocks and smooth CSS animations.</p>
+        <div class="project-tech">
+          <span>HTML</span><span>CSS</span>
+        </div>
+        <a href="https://abhayyadav0090.github.io/daily-routine-webpage/" target="_blank" class="project-link">
+          View Live <span>→</span>
+        </a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-num">03</div>
+        <div class="project-emoji">🥦</div>
+        <h3>Nutri-Flex</h3>
+        <p>A nutrition-themed responsive web app with a modern, mobile-friendly design. Blends creativity with practical health information presentation.</p>
+        <div class="project-tech">
+          <span>HTML</span><span>CSS</span><span>Responsive</span>
+        </div>
+        <a href="https://abhayyadav0090.github.io/Nutri-Flex/" target="_blank" class="project-link">
+          View Live <span>→</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="section section-alt">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2 class="section-title">Certifications</h2>
+    </div>
+    <div class="certs-list">
+
+      <div class="cert-item">
+        <div class="cert-icon">🏅</div>
+        <div class="cert-info">
+          <h4>MERN Stack Development</h4>
+          <span class="cert-issuer">Great Learning &amp; Coder Army</span>
+        </div>
+        <div class="cert-badge">Verified</div>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-icon">☁️</div>
+        <div class="cert-info">
+          <h4>AWS Cloud Foundations</h4>
+          <span class="cert-issuer">Amazon Web Services</span>
+        </div>
+        <div class="cert-badge">Verified</div>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-icon">🌐</div>
+        <div class="cert-info">
+          <h4>HTML &amp; CSS Bootcamp</h4>
+          <span class="cert-issuer">LetsUpgrade</span>
+        </div>
+        <div class="cert-badge">Verified</div>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-icon">⚙️</div>
+        <div class="cert-info">
+          <h4>Node.js Bootcamp</h4>
+          <span class="cert-issuer">LetsUpgrade</span>
+        </div>
+        <div class="cert-badge">Verified</div>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-icon">🤖</div>
+        <div class="cert-info">
+          <h4>AI Tools Workshop</h4>
+          <span class="cert-issuer">Workshop Certification</span>
+        </div>
+        <div class="cert-badge">Verified</div>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-icon">📊</div>
+        <div class="cert-info">
+          <h4>Financial Literacy Quiz</h4>
+          <span class="cert-issuer">NISM / SEBI</span>
+        </div>
+        <div class="cert-badge">Verified</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2 class="section-title">Get In Touch</h2>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-left">
+        <p class="contact-lead">Have a project in mind? Let's build something great together.</p>
+        <p>I'm always open to collaborations, internships, freelance work, or just a good conversation about tech and learning.</p>
+        <div class="contact-methods">
+          <a href="mailto:abhayyadav19955@gmail.com" class="contact-method">
+            <span class="cm-icon">✉️</span>
+            <div>
+              <span class="cm-label">Email</span>
+              <span class="cm-value">abhayyadav19955@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/abhay-yadav-6923742b5/" target="_blank" class="contact-method">
+            <span class="cm-icon">💼</span>
+            <div>
+              <span class="cm-label">LinkedIn</span>
+              <span class="cm-value">Abhay Yadav</span>
+            </div>
+          </a>
+          <a href="https://github.com/abhayyadav0090" target="_blank" class="contact-method">
+            <span class="cm-icon">🐙</span>
+            <div>
+              <span class="cm-label">GitHub</span>
+              <span class="cm-value">abhayyadav0090</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="contact-right">
+        <div class="contact-form-box">
+          <div class="form-row">
+            <input type="text" id="fname" placeholder="Your Name" />
+          </div>
+          <div class="form-row">
+            <input type="email" id="femail" placeholder="Your Email" />
+          </div>
+          <div class="form-row">
+            <textarea id="fmsg" placeholder="Your Message" rows="4"></textarea>
+          </div>
+          <button class="cta-primary" id="sendBtn" style="width:100%;justify-content:center;">Send Message</button>
+          <p id="form-feedback" style="display:none;margin-top:12px;text-align:center;color:#4ade80;font-size:0.85rem;">✅ Thanks! I'll get back to you soon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>© 2026 Abhay Yadav | Built with ❤️</p>
+    <div class="footer-inner">
+      <div class="footer-logo">Abhay Yadav</div>
+      <p class="footer-sub">B.Tech IT · Full Stack Developer · Building in Public</p>
+      <div class="footer-links">
+        <a href="https://github.com/abhayyadav0090" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/abhay-yadav-6923742b5/" target="_blank">LinkedIn</a>
+        <a href="mailto:abhayyadav19955@gmail.com">Email</a>
+      </div>
+      <p class="footer-copy">© 2026 Abhay Yadav · Built with ❤️ and lots of ☕</p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
