@@ -10,22 +10,23 @@
 
 
 /* MERN Practice styles */
-.mern-practice { padding: 48px 0; background: #f9fbff; }
-.mern-practice .section-title { font-size: 1.6rem; margin-bottom: 18px; }
+.mern-practice { padding: 48px 0; background: #0f1724; color: #e6eef8; }
+.mern-practice .section-title { font-size: 1.6rem; margin-bottom: 18px; color: #fff; }
 .mern-grid { display: grid; grid-template-columns: 1fr; gap: 18px; align-items: center; }
-.mern-screenshot img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 6px 18px rgba(20,30,60,0.08); display: block; }
-.mern-content .lead { font-size: 1rem; margin-bottom: 12px; color: #1f2937; }
-.mern-features { list-style: none; padding: 0; margin: 0 0 14px 0; color: #374151; }
+.mern-screenshot img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.6); display: block; }
+.mern-content .lead { font-size: 1rem; margin-bottom: 12px; color: #cbd5e1; }
+.mern-features { list-style: none; padding: 0; margin: 0 0 14px 0; color: #94a3b8; }
 .mern-features li { margin: 6px 0; }
 .mern-ctas { display: flex; gap: 10px; flex-wrap: wrap; }
 .btn { padding: 10px 14px; border-radius: 6px; text-decoration: none; font-weight: 600; }
-.btn-primary { background: #0b5fff; color: #fff; }
-.btn-outline { background: transparent; border: 1px solid #0b5fff; color: #0b5fff; }
+.btn-primary { background: #06b6d4; color: #0b1220; }
+.btn-outline { background: transparent; border: 1px solid #06b6d4; color: #06b6d4; }
 
 /* Responsive two-column on wider screens */
 @media (min-width: 820px) {
   .mern-grid { grid-template-columns: 420px 1fr; gap: 28px; }
 }
+
 
 
 
