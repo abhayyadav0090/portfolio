@@ -7,31 +7,6 @@
   box-sizing: border-box;
 }
 
-
-
-/* MERN Practice styles */
-.mern-practice { padding: 48px 0; background: #0f1724; color: #e6eef8; }
-.mern-practice .section-title { font-size: 1.6rem; margin-bottom: 18px; color: #fff; }
-.mern-grid { display: grid; grid-template-columns: 1fr; gap: 18px; align-items: center; }
-.mern-screenshot img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.6); display: block; }
-.mern-content .lead { font-size: 1rem; margin-bottom: 12px; color: #cbd5e1; }
-.mern-features { list-style: none; padding: 0; margin: 0 0 14px 0; color: #94a3b8; }
-.mern-features li { margin: 6px 0; }
-.mern-ctas { display: flex; gap: 10px; flex-wrap: wrap; }
-.btn { padding: 10px 14px; border-radius: 6px; text-decoration: none; font-weight: 600; }
-.btn-primary { background: #06b6d4; color: #0b1220; }
-.btn-outline { background: transparent; border: 1px solid #06b6d4; color: #06b6d4; }
-
-/* Responsive two-column on wider screens */
-@media (min-width: 820px) {
-  .mern-grid { grid-template-columns: 420px 1fr; gap: 28px; }
-}
-
-
-
-
-
-
 :root {
   --bg: #080b10;
   --bg-alt: #0d1117;
@@ -1078,4 +1053,143 @@ footer {
   .hero-name { font-size: 3rem; }
   .hero-stats { gap: 18px; }
   .certs-list { grid-template-columns: 1fr; }
+}
+
+
+/* ===========================
+   DEVELOPER PROFILES SECTION
+=========================== */
+
+.profiles-section {
+  padding: 100px 0;
+  background: var(--bg-alt);
+}
+
+.profiles-section .section-header {
+  max-width: 1200px;
+  margin: 0 auto 56px;
+  padding: 0 48px;
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* ===========================
+   PROFILE CARD
+=========================== */
+
+.profile-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+/* top accent line — same as project cards */
+.profile-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.profile-card:hover {
+  border-color: rgba(232, 201, 122, 0.2);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.profile-card:hover::before {
+  opacity: 1;
+}
+
+/* icon box */
+.profile-card .card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 1.6rem;
+  transition: border-color var(--transition);
+}
+
+.profile-card:hover .card-icon {
+  border-color: rgba(232, 201, 122, 0.25);
+}
+
+.profile-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.profile-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.profile-card a.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 26px;
+  background: var(--accent);
+  color: #080b10;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  margin-top: auto;
+}
+
+.profile-card a.btn:hover {
+  background: #f0d88a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232, 201, 122, 0.3);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 900px) {
+  .profiles-grid,
+  .profiles-section .section-header {
+    padding: 0 24px;
+  }
 }
