@@ -46,7 +46,7 @@
         <div class="hero-ctas">
           <a href="#projects" class="cta-primary">View My Work</a>
           <a href="#contact" class="cta-secondary">Get In Touch</a>
-          <a href="#profiles" class="cta-secondary">Codolio</a>
+          <a href="#profiles" class="cta-secondary">View Profiles</a>
         </div>
         <div class="hero-stats">
           <div class="stat">
@@ -454,12 +454,60 @@
 
     </div>
   </section>
+    
+  <section id="profiles" class="section">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2 class="section-title">Profiles</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
 
-  <section id="profiles">
-    <div class="profile-card">
-      <h3>Codolio Dashboard</h3>
-      <p>Explore my coding journey, certifications, and achievements on Codolio.</p>
-      <a href="https://codolio.com/profile/Abhayyadav0090" target="_blank" class="btn">View Dashboard</a>
+      <!-- CODOLIO — iframe works -->
+      <div class="profile-card" style="overflow: hidden; padding: 0; display: flex; flex-direction: column;">
+        <div style="padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.07); display: flex; align-items: center; gap: 10px;">
+          <span>🏆 Codolio Dashboard</span>
+          <a href="https://codolio.com/profile/Abhayyadav0090" target="_blank" style="margin-left: auto; font-size: 12px; opacity: 0.6;">open ↗</a>
+        </div>
+        <iframe
+          src="https://codolio.com/profile/Abhayyadav0090"
+          style="width: 100%; height: 340px; border: none;"
+          loading="lazy"
+          title="Codolio Dashboard">
+        </iframe>
+      </div>
+
+      <!-- LINKEDIN — styled card (iframe blocked by LinkedIn) -->
+      <div class="profile-card" style="display: flex; flex-direction: column; gap: 20px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: #0a66c2; display: flex; align-items: center; justify-content: center; font-weight: 700; color: white; font-size: 18px;">AY</div>
+          <div>
+            <p style="font-weight: 700; margin: 0;">Abhay Yadav</p>
+            <p style="font-size: 13px; opacity: 0.6; margin: 0;">B.Tech IT · Full Stack Developer</p>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <div style="background: rgba(255,255,255,0.04); border-radius: 8px; padding: 10px 12px;">
+            <p style="font-size: 11px; opacity: 0.5; margin: 0 0 4px;">#CoderArmy</p>
+            <p style="font-size: 13px; font-weight: 600; margin: 0;">Building in Public</p>
+          </div>
+          <div style="background: rgba(255,255,255,0.04); border-radius: 8px; padding: 10px 12px;">
+            <p style="font-size: 11px; opacity: 0.5; margin: 0 0 4px;">Goal</p>
+            <p style="font-size: 13px; font-weight: 600; margin: 0;">Full Stack Developer by 2029</p>
+          </div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+          <span style="font-size: 12px; padding: 3px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.15); opacity: 0.8;">MERN Stack</span>
+          <span style="font-size: 12px; padding: 3px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.15); opacity: 0.8;">HTML & CSS</span>
+          <span style="font-size: 12px; padding: 3px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.15); opacity: 0.8;">JavaScript</span>
+          <span style="font-size: 12px; padding: 3px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.15); opacity: 0.8;">React</span>
+          <span style="font-size: 12px; padding: 3px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.15); opacity: 0.8;">C & C++</span>
+          <span style="font-size: 12px; padding: 3px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.15); opacity: 0.8;">Learning DSA</span>
+        </div>
+        <a href="https://www.linkedin.com/in/abhay-yadav-6923742b5/" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background: #0a66c2; color: white; border-radius: 8px; font-weight: 600; text-decoration: none;">
+          View LinkedIn Profile ↗
+        </a>
+      </div>
+
     </div>
   </section>
 
