@@ -1193,3 +1193,58 @@ footer {
     padding: 0 24px;
   }
 }
+
+@media (max-width: 768px) {
+  #profiles .section-header + div {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===========================
+   PROFILES SECTION — ADD THIS
+   to the bottom of your style.css
+=========================== */
+
+/* Grid wrapper inside #profiles */
+#profiles > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Equal-height cards */
+#profiles .profile-card {
+  aspect-ratio: 4 / 3;
+  min-height: 340px;
+}
+
+/* Codolio card: remove padding so iframe fills it */
+#profiles .profile-card:first-child {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Codolio iframe: subtle dark filter — NO invert, photo safe */
+#profiles .profile-card:first-child iframe {
+  width: 100%;
+  flex: 1;
+  border: none;
+  display: block;
+  min-height: 0;
+  /* Dims the white background to feel dark, without inverting photos */
+  filter: brightness(0.78) contrast(1.08) saturate(0.85);
+}
+
+/* Responsive: stack vertically on mobile */
+@media (max-width: 768px) {
+  #profiles > div {
+    grid-template-columns: 1fr !important;
+  }
+  #profiles .profile-card {
+    aspect-ratio: unset;
+    min-height: 380px;
+  }
+}
