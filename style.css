@@ -851,69 +851,84 @@ body:hover .cursor { opacity: 1; }
 }
 
 /* ===========================
-   CONTACT
+   CONTACT — cert-style grid
 =========================== */
-.contact-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-}
 
 .contact-lead {
   font-family: var(--font-display);
   font-size: 1.6rem;
   line-height: 1.4;
   color: var(--text);
-  margin-bottom: 16px;
+  margin-bottom: 5px;
   font-weight: 400;
 }
 
-.contact-left > p {
-  font-size: 0.93rem;
+.contact-sub {
+  font-size: 1.2rem;
   color: var(--text-muted);
-  line-height: 1.8;
-  font-weight: 300;
-  margin-bottom: 36px;
+  line-height: 1.4;
+  font-weight: 500;
+  margin-bottom: 40px;
 }
 
-.contact-methods { display: flex; flex-direction: column; gap: 16px; }
+/* Same grid as .certs-list */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+}
 
-.contact-method {
+/* Same card style as .cert-item */
+.contact-item {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 16px 20px;
+  padding: 20px 24px;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: var(--radius);
   text-decoration: none;
   transition: border-color var(--transition), transform var(--transition);
 }
 
-.contact-method:hover {
-  border-color: rgba(232, 201, 122, 0.25);
+.contact-item:hover {
+  border-color: rgba(232, 201, 122, 0.2);
   transform: translateX(6px);
 }
 
-.cm-icon { font-size: 1.4rem; }
-
-.cm-label {
-  display: block;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--text-dim);
-  margin-bottom: 2px;
+.contact-icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.cm-value {
-  display: block;
-  font-size: 0.88rem;
+.contact-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.contact-info { flex: 1; }
+
+.contact-info h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
   color: var(--text);
-  font-weight: 400;
+  margin-bottom: 3px;
 }
 
+.contact-val {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+/* Reuses .cert-badge already defined — no extra CSS needed */
+
+/* Form box below grid */
 .contact-form-box {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -940,13 +955,14 @@ body:hover .cursor { opacity: 1; }
 }
 
 .form-row input::placeholder,
-.form-row textarea::placeholder {
-  color: var(--text-dim);
-}
+.form-row textarea::placeholder { color: var(--text-dim); }
 
 .form-row input:focus,
-.form-row textarea:focus {
-  border-color: var(--accent);
+.form-row textarea:focus { border-color: var(--accent); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; }
 }
 
 /* ===========================
@@ -1202,8 +1218,7 @@ footer {
 
 
 /* ===========================
-   PROFILES SECTION — ADD THIS
-   to the bottom of your style.css
+   PROFILES SECTION — GRID & CARDS
 =========================== */
 
 /* Grid wrapper inside #profiles */
